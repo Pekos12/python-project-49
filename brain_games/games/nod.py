@@ -15,9 +15,9 @@ def nod_game1():
     number2 = random.randint(0, 100)
     right_answer = math.gcd(number1, number2)
     question = f'{number1} {number2}'
-    answer = prompt.string(f'''Find the greatest common divisor of given numbers.
+    ans = prompt.string(f'''Find the greatest common divisor of given numbers.
 Question: {question}. ''')
-    return round1(right_answer, answer, name)
+    return round1(right_answer, ans, name)
 
 
 def nod_game2():

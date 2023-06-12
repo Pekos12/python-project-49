@@ -1,7 +1,3 @@
-import prompt
-import random
-
-
 def round1(right_answer, answer, name):
     print(f'Your answer: {answer}')
     if answer == f'{right_answer}':

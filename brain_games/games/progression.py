@@ -1,6 +1,5 @@
 import prompt
 import random
-import math
 from brain_games.logics import round1, round2, round3
 
 
