@@ -7,3 +7,5 @@ testing brain-even game: https://asciinema.org/a/kG4v3PZnsfkPG3Ovyqw9ATZuw
 testing brain-calc game: https://asciinema.org/a/k7eePUNb0ahrqeM9jmSuASuCS
 
 testing brain-gcd game: https://asciinema.org/a/drGvkVQbVsmS30hfFRiMcgpRU
+
+testing brain-progression game: https://asciinema.org/a/fYsKIRZJRXYN5JomaBNb2Vh4j
