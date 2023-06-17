@@ -23,7 +23,7 @@ def calc_game1():
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
     answer = prompt.string(f'''What is the result of the expression?
-Question: {question}. ''')
+Question: {question} ''')
     print(f'Your answer: {answer}')
     if answer == f'{right_answer}':
         print('Correct!')
@@ -48,7 +48,7 @@ def calc_game2():
     else:
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
-    answer = prompt.string(f'''Question: {question}. ''')
+    answer = prompt.string(f'''Question: {question} ''')
     print(f'Your answer: {answer}')
     if answer == f'{right_answer}':
         print('Correct!')
@@ -73,7 +73,7 @@ def calc_game3():
     else:
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
-    answer = prompt.string(f'''Question: {question}. ''')
+    answer = prompt.string(f'''Question: {question} ''')
     print(f'Your answer: {answer}')
     if answer == f'{right_answer}':
         print(f'''Correct!
