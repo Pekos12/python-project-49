@@ -3,13 +3,7 @@ import random
 from brain_games.logics import round1, round2, round3
 
 
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
-
-def prime_game1():
+def prime_game1(name):
     number1 = random.randint(0, 1000)
     if number1 == 2:
         right_answer = 'yes'
@@ -30,7 +24,7 @@ def prime_game1():
     return round1(right_answer, ans, name)
 
 
-def prime_game2():
+def prime_game2(name):
     number1 = random.randint(0, 1000)
     if number1 == 2:
         right_answer = 'yes'
@@ -49,7 +43,7 @@ def prime_game2():
     return round2(right_answer, answer, name)
 
 
-def prime_game3():
+def prime_game3(name):
     number1 = random.randint(0, 1000)
     if number1 == 2:
         right_answer = 'yes'
@@ -68,11 +62,11 @@ def prime_game3():
     round3(right_answer, answer, name)
 
 
-def prime_games():
-    a = prime_game1()
+def prime_games(name):
+    a = prime_game1(name)
     if a is True:
         return True
-    b = prime_game2()
+    b = prime_game2(name)
     if b is True:
         return True
-    prime_game3()
+    prime_game3(name)

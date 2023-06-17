@@ -3,13 +3,7 @@ import random
 from brain_games.logics import round1, round2, round3
 
 
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
-
-def progression_game1():
+def progression_game1(name):
     len_of_list = random.randint(5, 13)
     i = 0
     list = [random.randint(0, 100)]
@@ -28,7 +22,7 @@ Question: {question} ''')
     return round1(right_answer, answer, name)
 
 
-def progression_game2():
+def progression_game2(name):
     len_of_list = random.randint(5, 13)
     i = 0
     list = [random.randint(0, 100)]
@@ -46,7 +40,7 @@ def progression_game2():
     return round2(right_answer, answer, name)
 
 
-def progression_game3():
+def progression_game3(name):
     len_of_list = random.randint(5, 13)
     i = 0
     list = [random.randint(0, 100)]
@@ -64,11 +58,11 @@ def progression_game3():
     round3(right_answer, answer, name)
 
 
-def progression_games():
-    a = progression_game1()
+def progression_games(name):
+    a = progression_game1(name)
     if a is True:
         return True
-    b = progression_game2()
+    b = progression_game2(name)
     if b is True:
         return True
-    progression_game3()
+    progression_game3(name)

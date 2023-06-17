@@ -1,71 +1,48 @@
 import prompt
 import random
+from brain_games.logics import round1, round2, round3
 
 
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
-
-def even_game1():
+def even_game1(name):
     number1 = random.randint(0, 100)
     if number1 % 2 == 0:
-        right_answer1 = 'yes'
+        right_answer = 'yes'
     else:
-        right_answer1 = 'no'
-    answer1 = prompt.string(f'''Answer "yes" if the number is even,
-otherwise answer "no".
-Question: {number1} ''')
-    print(f'Your answer: {answer1}')
-    if answer1 == right_answer1:
-        print('Correct!')
-    else:
-        print(f"""'{answer1}' is wrong answer ;(.
-Correct answer '{right_answer1}'.
-Let's try again, {name}!""")
-        return True
+        right_answer = 'no'
+    question = f'{number1}'
+    ans = prompt.string(f'Answer "yes" if the number is even, '
+                        f'otherwise answer "no".\n'
+                        f'Question: {question} ')
+    return round1(right_answer, ans, name)
 
 
-def even_game2():
+def even_game2(name):
     number2 = random.randint(0, 100)
     if number2 % 2 == 0:
-        right_answer2 = 'yes'
+        right_answer = 'yes'
     else:
-        right_answer2 = 'no'
-    answer2 = prompt.string(f'''Question: {number2} ''')
-    print(f'Your answer: {answer2}')
-    if answer2 == right_answer2:
-        print('Correct!')
-    else:
-        print(f"""'{answer2}' is wrong answer ;(.
-Correct answer '{right_answer2}'.
-Let's try again, {name}!""")
-        return True
+        right_answer = 'no'
+    question = number2
+    answer = prompt.string(f'''Question: {question} ''')
+    return round2(right_answer, answer, name)
 
 
-def even_game3():
+def even_game3(name):
     number3 = random.randint(0, 100)
     if number3 % 2 == 0:
-        right_answer3 = 'yes'
+        right_answer = 'yes'
     else:
-        right_answer3 = 'no'
-    answer3 = prompt.string(f'''Question: {number3} ''')
-    print(f'Your answer: {answer3}')
-    if answer3 == right_answer3:
-        print(f'''Correct!
-Congratulations, {name}!''')
-    else:
-        print(f"""'{answer3}' is wrong answer ;(.
-Correct answer '{right_answer3}'.
-Let's try again, {name}!""")
+        right_answer = 'no'
+    question = number3
+    answer = prompt.string(f'''Question: {question} ''')
+    round3(right_answer, answer, name)
 
 
-def even_games():
-    a = even_game1()
+def even_games(name):
+    a = even_game1(name)
     if a is True:
         return True
-    b = even_game2()
+    b = even_game2(name)
     if b is True:
         return True
-    even_game3()
+    even_game3(name)

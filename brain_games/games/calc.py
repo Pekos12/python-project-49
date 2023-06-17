@@ -1,14 +1,9 @@
 import prompt
 import random
+from brain_games.logics import round1, round2, round3
 
 
-def welcome_user():
-    global name
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
-
-def calc_game1():
+def calc_game1(name):
     tuple_of_deciding = [1, 2, 3]
     decider = random.choice(tuple_of_deciding)
     number1 = random.randint(0, 100)
@@ -22,19 +17,12 @@ def calc_game1():
     else:
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
-    answer = prompt.string(f'''What is the result of the expression?
+    ans = prompt.string(f'''What is the result of the expression?
 Question: {question} ''')
-    print(f'Your answer: {answer}')
-    if answer == f'{right_answer}':
-        print('Correct!')
-    else:
-        print(f"""'{answer}' is wrong answer ;(.
-Correct answer '{right_answer}'.
-Let's try again, {name}!""")
-        return True
+    return round1(right_answer, ans, name)
 
 
-def calc_game2():
+def calc_game2(name):
     tuple_of_deciding = [1, 2, 3]
     decider = random.choice(tuple_of_deciding)
     number1 = random.randint(0, 100)
@@ -49,17 +37,10 @@ def calc_game2():
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
     answer = prompt.string(f'''Question: {question} ''')
-    print(f'Your answer: {answer}')
-    if answer == f'{right_answer}':
-        print('Correct!')
-    else:
-        print(f"""'{answer}' is wrong answer ;(.
-Correct answer '{right_answer}'.
-Let's try again, {name}!""")
-        return True
+    return round2(right_answer, answer, name)
 
 
-def calc_game3():
+def calc_game3(name):
     tuple_of_deciding = [1, 2, 3]
     decider = random.choice(tuple_of_deciding)
     number1 = random.randint(0, 100)
@@ -74,22 +55,14 @@ def calc_game3():
         question = f'{number1} * {number2}'
         right_answer = number1 * number2
     answer = prompt.string(f'''Question: {question} ''')
-    print(f'Your answer: {answer}')
-    if answer == f'{right_answer}':
-        print(f'''Correct!
-Congratulations, {name}!''')
-    else:
-        print(f"""'{answer}' is wrong answer ;(.
-Correct answer '{right_answer}'.
-Let's try again, {name}!""")
-        return True
+    return round3(right_answer, answer, name)
 
 
-def calc_games():
-    a = calc_game1()
+def calc_games(name):
+    a = calc_game1(name)
     if a is True:
         return True
-    b = calc_game2()
+    b = calc_game2(name)
     if b is True:
         return True
-    calc_game3()
+    calc_game3(name)
