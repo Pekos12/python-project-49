@@ -9,3 +9,5 @@ testing brain-calc game: https://asciinema.org/a/k7eePUNb0ahrqeM9jmSuASuCS
 testing brain-gcd game: https://asciinema.org/a/drGvkVQbVsmS30hfFRiMcgpRU
 
 testing brain-progression game: https://asciinema.org/a/fYsKIRZJRXYN5JomaBNb2Vh4j
+
+testing brain-prime game: https://asciinema.org/a/2Hq3J5kWCNRtn679xgIq5TFDC
