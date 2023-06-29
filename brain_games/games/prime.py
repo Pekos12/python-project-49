@@ -4,11 +4,7 @@ from brain_games.logics import round1, round2, round3
 
 
 def prime_game1(name):
-    number1 = random.randint(0, 1000)
-    if number1 == 2:
-        right_answer = 'yes'
-    if number1 < 2:
-        right_answer = 'no'
+    number1 = random.randint(3, 1000)
     k = 0
     for i in range(2, number1 // 2 + 1):
         if (number1 % i == 0):
@@ -25,11 +21,7 @@ def prime_game1(name):
 
 
 def prime_game2(name):
-    number1 = random.randint(0, 1000)
-    if number1 == 2:
-        right_answer = 'yes'
-    if number1 < 2:
-        right_answer = 'no'
+    number1 = random.randint(3, 1000)
     k = 0
     for i in range(2, number1 // 2 + 1):
         if (number1 % i == 0):
@@ -44,11 +36,7 @@ def prime_game2(name):
 
 
 def prime_game3(name):
-    number1 = random.randint(0, 1000)
-    if number1 == 2:
-        right_answer = 'yes'
-    if number1 < 2:
-        right_answer = 'no'
+    number1 = random.randint(3, 1000)
     k = 0
     for i in range(2, number1 // 2 + 1):
         if (number1 % i == 0):
